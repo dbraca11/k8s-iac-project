@@ -3,75 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Cloud & Infrastructure - Darwin Braca</title>
+    <title>Darwin Braca | Cloud & DevOps Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f4f9; color: #333; text-align: center; padding: 20px; line-height: 1.6; }
-        .container { max-width: 900px; margin: auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        h1 { color: #007bff; margin-bottom: 10px; }
-        h2 { color: #444; margin-top: 30px; border-bottom: 2px solid #007bff; display: inline-block; padding-bottom: 5px; }
-        .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); margin: 25px 0; }
-        .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .tech-tags { margin: 25px 0; }
-        .tag { background: #007bff; color: white; padding: 6px 18px; border-radius: 20px; font-size: 0.9em; margin: 5px; display: inline-block; font-weight: bold; }
-        .ai-section { background: #eef7ff; padding: 20px; border-left: 5px solid #007bff; border-radius: 8px; margin-top: 30px; text-align: left; }
-        .resumen { text-align: left; background: #fafafa; padding: 20px; border-radius: 8px; border: 1px solid #eee; margin-bottom: 40px; }
-        footer { margin-top: 40px; font-size: 0.9em; color: #777; }
+        :root {
+            --primary: #007bff;
+            --dark: #1a1a2e;
+            --bg: #f0f2f5;
+            --white: #ffffff;
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg); color: #333; margin: 0; padding: 0; }
+        
+        /* Encabezado con Foto */
+        .header { background: var(--dark); color: var(--white); padding: 60px 20px; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--primary); object-fit: cover; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .header h1 { margin: 10px 0; font-size: 2.5em; }
+        .header p { font-size: 1.1em; opacity: 0.9; }
+
+        .container { max-width: 1100px; margin: -50px auto 50px; padding: 0 20px; }
+
+        /* Tech Tags */
+        .tech-tags { text-align: center; margin-bottom: 40px; }
+        .tag { background: var(--white); color: var(--dark); padding: 8px 20px; border-radius: 30px; font-size: 0.9em; margin: 5px; display: inline-block; font-weight: 600; box-shadow: 0 2px 5px rgba(0,0,0,0.1); border: 1px solid #eee; }
+        .tag i { color: var(--primary); margin-right: 8px; }
+
+        /* Grid de Proyectos (Tarjetas una al lado de la otra) */
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        .card { background: var(--white); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: transform 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .card-content { padding: 25px; text-align: left; }
+        .card h3 { margin-top: 0; color: var(--dark); border-left: 4px solid var(--primary); padding-left: 10px; }
+
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; background: #000; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+        /* Highlights */
+        .highlights { list-style: none; padding: 0; margin: 15px 0; }
+        .highlights li { margin-bottom: 8px; font-size: 0.95em; display: flex; align-items: center; }
+        .highlights li::before { content: "✓"; color: var(--primary); font-weight: bold; margin-right: 10px; }
+
+        /* Sección IA */
+        .ai-vision { background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); color: white; padding: 30px; border-radius: 15px; text-align: left; position: relative; overflow: hidden; }
+        .ai-vision i { position: absolute; right: 20px; bottom: 10px; font-size: 5em; opacity: 0.1; }
+
+        footer { text-align: center; padding: 40px; color: #777; font-size: 0.9em; }
+
+        @media (max-width: 600px) { .project-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
-    <div class="container">
+
+    <header class="header">
+        <img src="perfil.jpg" alt="Darwin Braca" class="profile-img" onerror="this.src='https://via.placeholder.com/150'">
         <h1>Darwin Braca</h1>
-        <p style="font-size: 1.2em; color: #666;">Ingeniero de Infraestructura & Cloud Solutions</p>
+        <p>Ingeniero Cloud & DevOps | Especialista en Infraestructura Resiliente</p>
+    </header>
+
+    <div class="container">
         
         <div class="tech-tags">
-            <span class="tag">Kubernetes (K8s)</span>
-            <span class="tag">Docker</span>
-            <span class="tag">Python (FastAPI)</span>
-            <span class="tag">CI/CD</span>
-            <span class="tag">AIOps Vision</span>
+            <div class="tag"><i class="fab fa-docker"></i> Docker</div>
+            <div class="tag"><i class="fas fa-cubes"></i> Kubernetes (K8s)</div>
+            <div class="tag"><i class="fab fa-python"></i> Python (FastAPI)</div>
+            <div class="tag"><i class="fas fa-database"></i> PostgreSQL</div>
+            <div class="tag"><i class="fas fa-robot"></i> AIOps Vision</div>
         </div>
 
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+        <div class="project-grid">
+            <div class="card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/3ugEfcPBwsw" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <h3>1. Infraestructura Resiliente</h3>
+                    <p>Orquestación avanzada de alta disponibilidad.</p>
+                    <ul class="highlights">
+                        <li>Clúster de 3 réplicas para uptime 24/7.</li>
+                        <li>Self-healing (autosanación) automático.</li>
+                        <li>Despliegue con manifiestos YAML profesionales.</li>
+                    </ul>
+                </div>
+            </div>
 
-        <h2>1. Infraestructura Resiliente y Alta Disponibilidad</h2>
-        <p>Orquestación avanzada con Kubernetes para garantizar la autosanación de servicios.</p>
-        <div class="video-wrapper">
-            <iframe src="https://www.youtube.com/embed/3ugEfcPBwsw" 
-                title="Infraestructura Resiliente - Darwin Braca" 
-                allowfullscreen>
-            </iframe>
-        </div>
-        <div class="resumen">
-            <strong>Highlights técnicos:</strong>
-            <ul>
-                [cite_start]<li>Despliegue de clúster con 3 réplicas activas para garantizar disponibilidad[cite: 28].</li>
-                [cite_start]<li>Monitoreo de salud de los Pods y recuperación automática ante fallos[cite: 28].</li>
-            </ul>
-        </div>
-
-        <h2>2. Desarrollo de Microservicios con Python</h2>
-        <p>Demostración de creación de APIs eficientes y lógica de monitoreo de sistemas.</p>
-        <div class="video-wrapper">
-            <iframe src="https://drive.google.com/file/d/1z4OeIHPjFfJ2GHU6Ucox8tiQzcwDcfln/preview" 
-                allow="autoplay">
-            </iframe>
-        </div>
-        <div class="resumen">
-            <strong>Highlights técnicos:</strong>
-            <ul>
-                [cite_start]<li>Uso de FastAPI para alto rendimiento y automatización de flujos financieros[cite: 28].</li>
-                [cite_start]<li>Implementación de sistemas de observabilidad en contenedores Docker[cite: 28].</li>
-            </ul>
+            <div class="card">
+                <div class="video-container">
+                    <iframe src="https://drive.google.com/file/d/1z4OeIHPjFfJ2GHU6Ucox8tiQzcwDcfln/preview"></iframe>
+                </div>
+                <div class="card-content">
+                    <h3>2. Microservicios con Python</h3>
+                    <p>Desarrollo de APIs con FastAPI y monitoreo.</p>
+                    <ul class="highlights">
+                        <li>API RESTful de alto rendimiento.</li>
+                        <li>Lógica de monitoreo de salud del sistema.</li>
+                        <li>Contenerización completa con Docker.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div class="ai-section">
-            [cite_start]<p><strong>💡 Visión de IA Knowledge:</strong> Este portafolio integra conocimientos de IA para preparar infraestructuras capaces de soportar <em>AIOps</em>, permitiendo un monitoreo predictivo y una gestión de incidentes más inteligente[cite: 26].</p>
+        <div class="ai-vision">
+            <i class="fas fa-brain"></i>
+            <h3><i class="fas fa-microchip"></i> Visión AIOps:</h3>
+            <p>Mi enfoque técnico se centra en preparar infraestructuras para el análisis predictivo. Mediante la orquestación en K8s, facilito la integración de IA para analizar logs en tiempo real, optimizando recursos y anticipando fallos antes de que afecten al usuario final.</p>
         </div>
 
         <footer>
-            © 2026 Darwin Braca | Portafolio Técnico Actualizado
+            © 2026 Darwin Braca | <i class="fab fa-github"></i> <a href="https://github.com/dbraca11" style="color:#777; text-decoration:none;">dbraca11</a>
         </footer>
     </div>
+
 </body>
 </html>
 
