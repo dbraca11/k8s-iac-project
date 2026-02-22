@@ -3,62 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darwin Braca | Cloud Engineer</title>
+    <title>Darwin Braca | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --blue: #007bff; --dark: #0f172a; --bg: #f8fafc; }
-        body { font-family: 'Segoe UI', sans-serif; background-color: var(--bg); margin: 0; padding: 0; text-align: center; }
-        
-        /* Encabezado sólido sin inclinaciones */
-        .header { background: var(--dark); color: white; padding: 60px 20px; border-bottom: 5px solid var(--blue); }
-        .profile-img { 
-            width: 150px; height: 150px; border-radius: 50%; 
-            border: 4px solid var(--blue); object-fit: cover; 
-            margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        :root {
+            --primary: #0056b3;
+            --bg-light: #f4f7fa;
+            --white: #ffffff;
+            --text-dark: #333333;
+            --text-muted: #666666;
         }
+
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color: var(--bg-light); color: var(--text-dark); margin: 0; padding: 0; }
+
+        /* Header Minimalista (Fondo Blanco/Claro) */
+        header { background: var(--white); padding: 40px 20px; text-align: center; border-bottom: 1px solid #e1e8ed; }
         
+        .profile-container { max-width: 800px; margin: auto; display: flex; flex-direction: column; align-items: center; }
+        
+        .profile-img { 
+            width: 130px; height: 130px; border-radius: 50%; 
+            border: 4px solid var(--primary); object-fit: cover; 
+            margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        header h1 { margin: 0; font-size: 2.2em; color: var(--primary); }
+        header p { margin: 10px 0; font-size: 1.1em; color: var(--text-muted); }
+
         .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-        .project-grid { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; }
-        .card { background: white; border-radius: 15px; overflow: hidden; width: 450px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        .video-container { position: relative; padding-bottom: 56.25%; height: 0; }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .card-content { padding: 20px; text-align: left; }
-        .ai-card { background: #eef7ff; padding: 25px; border-radius: 15px; border-left: 8px solid var(--blue); margin-top: 30px; text-align: left; }
-    </style>
-</head>
-<body>
-    <header class="header">
-        <img src="perfil.jpg" alt="Darwin Braca" class="profile-img">
-        <h1>Darwin Braca</h1>
-        <p>Ingeniero Cloud & DevOps | Especialista en Infraestructura Resiliente</p>
-    </header>
 
-    <div class="container">
-        <div class="project-grid">
-            <div class="card">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/3ugEfcPBwsw" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h3>Infraestructura Resiliente</h3>
-                    <p>Alta disponibilidad con Kubernetes.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="video-container">
-                    <iframe src="https://drive.google.com/file/d/1z4OeIHPjFfJ2GHU6Ucox8tiQzcwDcfln/preview"></iframe>
-                </div>
-                <div class="card-content">
-                    <h3>Microservicios con Python</h3>
-                    <p>Backend y monitoreo proactivo.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="ai-card">
-            <h3><i class="fas fa-robot"></i> Visión AIOps</h3>
-            <p>Infraestructuras preparadas para el análisis predictivo de logs y optimización automática de recursos.</p>
-        </div>
-    </div>
-</body>
-</html>
+        /* Etiquetas de Tecnología */
+        .tech-tags { text-align: center; margin-bottom: 40px; }
+        .tag { 
+            background: #1a1a2e; color: white; padding: 8px 18px; 
+            border-radius: 8px; font-
