@@ -13,33 +13,26 @@
         .subtitle { color: #666; font-size: 1rem; margin-bottom: 15px; }
         .tag { background: #1a1a2e; color: white; padding: 8px 15px; border-radius: 6px; font-size: 0.85rem; margin: 5px; display: inline-block; }
         .tag i { margin-right: 6px; color: #4dabff; }
-
         .main-container { max-width: 1100px; margin: 30px auto; padding: 0 15px; text-align: center; }
         .video-grid { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; }
         .video-card { background: #ffffff; width: 100%; max-width: 480px; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.1); border: 1px solid #e1e8ed; }
-        
         .iframe-container { position: relative; padding-bottom: 56.25%; height: 0; background: #000; }
         .iframe-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        
         .card-info { padding: 20px; text-align: left; }
         .card-info h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: #0056b3; }
         .card-info p { margin: 0; font-size: 0.95rem; color: #555; }
-
         .ai-card { background: white; padding: 25px; border-radius: 12px; border-left: 8px solid #0056b3; margin-top: 30px; text-align: left; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .roadmap-list { list-style: none; padding: 0; margin-top: 15px; }
         .roadmap-list li { margin-bottom: 8px; font-size: 0.9rem; display: flex; align-items: center; }
         .roadmap-list li i { color: #2ecc71; margin-right: 10px; }
-
-        /* SECCIÓN DE CONTACTO */
         .contact-section { margin-top: 40px; padding: 30px; background: #1a1a2e; border-radius: 15px; color: white; }
         .contact-buttons { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px; }
-        .btn { padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: flex; align-items: center; transition: 0.3s; color: white; }
+        .btn { padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: flex; align-items: center; transition: 0.3s; color: white !important; }
         .btn i { margin-right: 10px; font-size: 1.2rem; }
         .btn-whatsapp { background: #25d366; }
         .btn-whatsapp:hover { background: #128c7e; transform: translateY(-2px); }
         .btn-linkedin { background: #0077b5; }
         .btn-linkedin:hover { background: #005582; transform: translateY(-2px); }
-
         footer { margin-top: 50px; padding: 20px; color: #888; font-size: 0.85rem; }
     </style>
 </head>
@@ -71,5 +64,39 @@
 
             <div class="video-card">
                 <div class="iframe-container">
-                    <iframe src="
+                    <iframe src="https://drive.google.com/file/d/1z4OeIHPjFfJ2GHU6Ucox8tiQzcwDcfln/preview" allowfullscreen></iframe>
+                </div>
+                <div class="card-info">
+                    <h3>IaC y Escalado Horizontal</h3>
+                    <p>Automatización de infraestructura y crecimiento elástico de recursos.</p>
+                </div>
+            </div>
+        </div>
 
+        <div class="ai-card">
+            <h3 style="margin-top:0; color:#0056b3;"><i class="fas fa-list-ul"></i> Tópicos de Interés & Roadmap</h3>
+            <p>Especialización en desarrollo de proyectos bajo los siguientes pilares:</p>
+            <ul class="roadmap-list">
+                <li><i class="fas fa-check-circle"></i> Implementación de AIOps en Google Cloud Platform.</li>
+                <li><i class="fas fa-check-circle"></i> Observabilidad Avanzada y Análisis Predictivo de Logs.</li>
+                <li><i class="fas fa-check-circle"></i> DevSecOps: Seguridad automatizada en CI/CD.</li>
+            </ul>
+        </div>
+
+        <div class="contact-section">
+            <h3>¿Hablamos sobre tu infraestructura?</h3>
+            <div class="contact-buttons">
+                <a href="https://wa.me/584242564311" class="btn btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Directo
+                </a>
+                <a href="https://www.linkedin.com/in/darwin-braca-641499188/" class="btn btn-linkedin" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn Perfil
+                </a>
+            </div>
+        </div>
+
+        <footer>© 2026 Darwin Braca | Portafolio Profesional</footer>
+    </div>
+
+</body>
+</html>
