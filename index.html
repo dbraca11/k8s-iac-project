@@ -15,12 +15,15 @@
         .tag i { margin-right: 6px; color: #4dabff; }
         .main-container { max-width: 1100px; margin: 30px auto; padding: 0 15px; text-align: center; }
         .video-grid { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; }
-        .video-card { background: #ffffff; width: 100%; max-width: 480px; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.1); border: 1px solid #e1e8ed; }
+        .video-card { background: #ffffff; width: 100%; max-width: 480px; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.1); border: 1px solid #e1e8ed; transition: 0.3s; }
+        .video-card:hover { transform: translateY(-5px); }
         .iframe-container { position: relative; padding-bottom: 56.25%; height: 0; background: #000; }
         .iframe-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
         .card-info { padding: 20px; text-align: left; }
         .card-info h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: #0056b3; }
-        .card-info p { margin: 0; font-size: 0.95rem; color: #555; }
+        .card-info p { margin: 0; font-size: 0.95rem; color: #555; line-height: 1.4; }
+        .github-link { display: inline-block; margin-top: 12px; font-size: 0.85rem; color: #1a1a2e; text-decoration: none; font-weight: bold; }
+        .github-link:hover { color: #0056b3; }
         .ai-card { background: white; padding: 25px; border-radius: 12px; border-left: 8px solid #0056b3; margin-top: 30px; text-align: left; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
         .roadmap-list { list-style: none; padding: 0; margin-top: 15px; }
         .roadmap-list li { margin-bottom: 8px; font-size: 0.9rem; display: flex; align-items: center; }
@@ -52,61 +55,10 @@
 
     <div class="main-container">
         <div class="video-grid">
+            
             <div class="video-card">
                 <div class="iframe-container">
-                    <iframe src="https://www.youtube.com/embed/reDVrXt5fKo" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/5iNNl5d6Ph8" allowfullscreen></iframe>
                 </div>
                 <div class="card-info">
-                    <h3>Dockerización y Monitoreo Proactivo</h3>
-                    <p>Empaquetado de microservicios en Python y gestión de observabilidad en tiempo real con Docker Logs.</p>
-                </div>
-            </div>
-
-            <div class="video-card">
-                <div class="iframe-container">
-                    <iframe src="https://www.youtube.com/embed/3ugEfcPBwsw" allowfullscreen></iframe>
-                </div>
-                <div class="card-info">
-                    <h3>Infraestructura Resiliente (K8s)</h3>
-                    <p>Despliegue de clúster con alta disponibilidad y autosanación automática.</p>
-                </div>
-            </div>
-
-            <div class="video-card">
-                <div class="iframe-container">
-                    <iframe src="https://drive.google.com/file/d/1z4OeIHPjFfJ2GHU6Ucox8tiQzcwDcfln/preview" allowfullscreen></iframe>
-                </div>
-                <div class="card-info">
-                    <h3>IaC y Escalado Horizontal</h3>
-                    <p>Automatización de infraestructura y crecimiento elástico de recursos.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="ai-card">
-            <h3 style="margin-top:0; color:#0056b3;"><i class="fas fa-list-ul"></i> Tópicos de Interés & Roadmap</h3>
-            <p>Especialización en desarrollo de proyectos bajo los siguientes pilares:</p>
-            <ul class="roadmap-list">
-                <li><i class="fas fa-check-circle"></i> Implementación de AIOps en Google Cloud Platform.</li>
-                <li><i class="fas fa-check-circle"></i> Observabilidad Avanzada y Análisis Predictivo de Logs.</li>
-                <li><i class="fas fa-check-circle"></i> DevSecOps: Seguridad automatizada en CI/CD.</li>
-            </ul>
-        </div>
-
-        <div class="contact-section">
-            <h3>¿Hablamos sobre tu infraestructura?</h3>
-            <div class="contact-buttons">
-                <a href="https://wa.me/584242564311" class="btn btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp Directo
-                </a>
-                <a href="https://www.linkedin.com/in/darwin-braca-641499188/" class="btn btn-linkedin" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn Perfil
-                </a>
-            </div>
-        </div>
-
-        <footer>© 2026 Darwin Braca | Portafolio Profesional</footer>
-    </div>
-
-</body>
-</html>
+                    <h3>Orquestación Resiliente (Docker & Redis)</h3>
