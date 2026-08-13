@@ -1,161 +1,42 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darwin Braca | Portafolio Técnico</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f0f4f8; margin: 0; padding: 0; color: #333; }
-        header { background: #ffffff; padding: 30px 10px; text-align: center; border-bottom: 2px solid #0056b3; }
-        .profile-img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #0056b3; object-fit: cover; margin-bottom: 10px; }
-        h1 { margin: 5px 0; font-size: 1.8rem; color: #1a1a2e; }
-        .subtitle { color: #666; font-size: 1rem; margin-bottom: 15px; }
-        .tag { background: #1a1a2e; color: white; padding: 8px 15px; border-radius: 6px; font-size: 0.85rem; margin: 5px; display: inline-block; }
-        .tag i { margin-right: 6px; color: #4dabff; }
-        .main-container { max-width: 1100px; margin: 30px auto; padding: 0 15px; text-align: center; }
-        .video-grid { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; }
-        
-        .video-card { background: #ffffff; width: 100%; max-width: 480px; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.1); border: 1px solid #e1e8ed; display: flex; flex-direction: column; transition: 0.3s; }
-        .video-card:hover { transform: translateY(-5px); }
-        
-        .iframe-container { position: relative; padding-bottom: 56.25%; height: 0; background: #000; }
-        .iframe-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        
-        .card-info { padding: 20px; text-align: left; flex-grow: 1; display: flex; flex-direction: column; }
-        .card-info h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: #0056b3; }
-        .card-info p { margin: 0 0 15px 0; font-size: 0.95rem; color: #555; line-height: 1.4; }
-        
-        .btn-github { margin-top: auto; background: #24292e; color: white !important; text-decoration: none; padding: 10px 15px; border-radius: 6px; font-size: 0.85rem; font-weight: bold; display: inline-flex; align-items: center; justify-content: center; transition: 0.3s; }
-        .btn-github i { margin-right: 8px; font-size: 1.1rem; }
-        .btn-github:hover { background: #404448; }
+## 🗺️ Roadmap de Evolución del Proyecto
 
-        .ai-card { background: white; padding: 25px; border-radius: 12px; border-left: 8px solid #0056b3; margin-top: 30px; text-align: left; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .roadmap-list { list-style: none; padding: 0; margin-top: 15px; }
-        .roadmap-list li { margin-bottom: 8px; font-size: 0.9rem; display: flex; align-items: center; }
-        .roadmap-list li i { color: #2ecc71; margin-right: 10px; }
-        
-        .contact-section { margin-top: 40px; padding: 30px; background: #1a1a2e; border-radius: 15px; color: white; }
-        .contact-buttons { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px; }
-        .btn { padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: flex; align-items: center; transition: 0.3s; color: white !important; }
-        .btn i { margin-right: 10px; font-size: 1.2rem; }
-        .btn-whatsapp { background: #25d366; }
-        .btn-linkedin { background: #0077b5; }
-        footer { margin-top: 50px; padding: 20px; color: #888; font-size: 0.85rem; }
-    </style>
-</head>
-<body>
+- [x] **Fase 1: Escalado Declarativo Base (Completado)**
+  - [x] Despliegue de servicio crítico (pagos-service) mediante manifiestos YAML.
+  - [x] Alta disponibilidad inicial con 3 réplicas en ejecución.
+  - [x] Simulación de escalado horizontal manual de emergencia (3 a 8 réplicas) ante picos de tráfico.
+  - [x] Reducción de réplicas (Scale Down) para optimización de costos en horas valle.
 
-    <header>
-        <img src="perfil.jpg" alt="Darwin Braca" class="profile-img">
-        <h1>Darwin Braca</h1>
-        <p class="subtitle">Platform Engineer | Infraestructura, Observabilidad & Automatización</p>
-        <div class="tags">
-            <span class="tag"><i class="fab fa-docker"></i> Docker</span>
-            <span class="tag"><i class="fas fa-cubes"></i> Kubernetes</span>
-            <span class="tag"><i class="fas fa-layer-group"></i> Terraform</span>
-            <span class="tag"><i class="fas fa-terminal"></i> Ansible</span>
-            <span class="tag"><i class="fas fa-chart-line"></i> Prometheus & Grafana</span>
-            <span class="tag"><i class="fab fa-python"></i> Python</span>
-            <span class="tag"><i class="fas fa-brain"></i> AI Knowledge</span>
-        </div>
-    </header>
+- [ ] **Fase 2: Escalado Automático & Observabilidad**
+  - [ ] Implementación de Horizontal Pod Autoscaler (HPA) basado en métricas de CPU/RAM.
+  - [ ] Integración de Metrics Server para consumo automático de datos de carga.
+  - [ ] Configuración de Liveness y Readiness Probes para asegurar la salud de los pods antes de recibir tráfico.
 
-    <div class="main-container">
-        <div class="video-grid">
+- [ ] **Fase 3: GitOps & Despliegue Continuo**
+  - [ ] Sincronización automática de manifiestos utilizando ArgoCD.
+  - [ ] Configuración de alertas de escalado integradas con Prometheus y Grafana.
 
-            <div class="video-card">
-                <div class="card-info" style="padding-top: 30px;">
-                    <h3>Observabilidad y Automatización DevOps</h3>
-                    <p>Aprovisionamiento declarativo con Terraform, automatización de auditorías con Ansible y monitoreo en Docker usando Prometheus, Grafana y Node Exporter para la ingesta de métricas en tiempo real.</p>
-                    <a href="https://github.com/dbraca11/lab-devops-monitoreo" target="_blank" class="btn-github">
-                        <i class="fab fa-github"></i> Ver Código y Documentación
-                    </a>
-                </div>
-            </div>
+## 📊 Roadmap Gráfico
 
-            <div class="video-card">
-                <div class="iframe-container">
-                    <iframe src="https://www.youtube.com/embed/5iNNl5d6Ph8" allowfullscreen></iframe>
-                </div>
-                <div class="card-info">
-                    <h3>Orquestación Resiliente (Docker & Redis)</h3>
-                    <p>Implementación de lógica de reintentos (Self-healing) para garantizar disponibilidad de microservicios.</p>
-                    <a href="https://github.com/dbraca11/docker-redis-resilience-monitor" target="_blank" class="btn-github">
-                        <i class="fab fa-github"></i> Ver Código y Documentación
-                    </a>
-                </div>
-            </div>
+```mermaid
+flowchart TD
+    subgraph F1["Fase 1: Escalado Declarativo (Completado)"]
+        A1["kubectl apply pagos-app.yaml"]
+        A2["Escalado Manual (sed 3 -> 8)"]
+        A3["Scale Down & Control de Costos"]
+    end
 
-            <div class="video-card">
-                <div class="iframe-container">
-                    <iframe src="https://www.youtube.com/embed/reDVrXt5fKo" allowfullscreen></iframe>
-                </div>
-                <div class="card-info">
-                    <h3>Dockerización y Monitoreo Proactivo</h3>
-                    <p>Empaquetado de microservicios en Python y gestión de observabilidad en tiempo real con Docker Logs.</p>
-                    <a href="https://github.com/dbraca11/vigilante-infra" target="_blank" class="btn-github">
-                        <i class="fab fa-github"></i> Ver Código y Documentación
-                    </a>
-                </div>
-            </div>
+    subgraph F2["Fase 2: Auto-scaling (HPA) & Probes"]
+        B1["Metrics Server Integration"]
+        B2["HPA (CPU/RAM Triggers)"]
+        B3["Liveness & Readiness Probes"]
+    end
 
-            <div class="video-card">
-                <div class="iframe-container">
-                    <iframe src="https://www.youtube.com/embed/3ugEfcPBwsw" allowfullscreen></iframe>
-                </div>
-                <div class="card-info">
-                    <h3>Infraestructura Resiliente (K8s)</h3>
-                    <p>Despliegue de clúster con alta disponibilidad y autosanación automática ante fallos de nodos.</p>
-                    <a href="https://github.com/dbraca11/Infraestructura-Resiliente-K8s-/tree/main" target="_blank" class="btn-github">
-                        <i class="fab fa-github"></i> Ver Código y Documentación
-                    </a>
-                </div>
-            </div>
+    subgraph F3["Fase 3: GitOps & Observabilidad"]
+        C1["ArgoCD Deployment Sync"]
+        C2["Alertas Prometheus/Grafana"]
+        C3["Zero-downtime Rollouts"]
+    end
 
-            <div class="video-card">
-                <div class="iframe-container">
-                    <iframe src="https://drive.google.com/file/d/1z4OeIHPjFfJ2GHU6Ucox8tiQzcwDcfln/preview" allowfullscreen></iframe>
-                </div>
-                <div class="card-info">
-                    <h3>IaC y Escalado Horizontal</h3>
-                    <p>Automatización de infraestructura y crecimiento elástico de recursos según la demanda del tráfico.</p>
-                    <a href="https://github.com/dbraca11/k8s-iac-scaling" target="_blank" class="btn-github">
-                        <i class="fab fa-github"></i> Ver Código y Documentación
-                    </a>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="ai-card">
-            <h3 style="margin-top:0; color:#0056b3;"><i class="fas fa-list-ul"></i> Tópicos de Interés & Roadmap</h3>
-            <p>Especialización en desarrollo de proyectos bajo los siguientes pilares:</p>
-            <ul class="roadmap-list">
-                <li><i class="fas fa-check-circle"></i> Aprovisionamiento de Infraestructura como Código con Terraform & Ansible.</li>
-                <li><i class="fas fa-check-circle"></i> Observabilidad Avanzada y Monitoreo de Métricas con Prometheus & Grafana.</li>
-                <li><i class="fas fa-check-circle"></i> Filosofía y Métricas SRE (SLO, SLI, Error Budgets & Blameless Postmortems).</li>
-                <li><i class="fas fa-check-circle"></i> DevSecOps: Pipelines dinámicos de integración continua en GitLab CI & GitHub Actions.</li>
-            </ul>
-        </div>
-
-        <div class="contact-section">
-            <h3>¿Charlamos?</h3>
-            <div class="contact-buttons">
-                <a href="https://wa.me/584242564311" class="btn btn-whatsapp" target="_blank">
-                    <i class="fab fa-whatsapp"></i> WhatsApp Directo
-                </a>
-                <a href="https://www.linkedin.com/in/darwin-braca-641499188/" class="btn btn-linkedin" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn Perfil
-                </a>
-            </div>
-        </div>
-
-        <footer>© 2026 Darwin Braca | Portafolio Profesional</footer>
-    </div>
-
-</body>
-</html>
-
+    F1 --> F2 --> F3
 
 
