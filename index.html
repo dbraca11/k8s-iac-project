@@ -4,44 +4,270 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darwin Braca | Portafolio Técnico</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background-color: #f0f4f8; margin: 0; padding: 0; color: #333; }
-        header { background: #ffffff; padding: 30px 10px; text-align: center; border-bottom: 2px solid #0056b3; }
-        .profile-img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #0056b3; object-fit: cover; margin-bottom: 10px; }
-        h1 { margin: 5px 0; font-size: 1.8rem; color: #1a1a2e; }
-        .subtitle { color: #666; font-size: 1rem; margin-bottom: 15px; }
-        .tag { background: #1a1a2e; color: white; padding: 8px 15px; border-radius: 6px; font-size: 0.85rem; margin: 5px; display: inline-block; }
-        .tag i { margin-right: 6px; color: #4dabff; }
-        .main-container { max-width: 1100px; margin: 30px auto; padding: 0 15px; text-align: center; }
-        .video-grid { display: flex; flex-wrap: wrap; gap: 25px; justify-content: center; }
-        
-        .video-card { background: #ffffff; width: 100%; max-width: 480px; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.1); border: 1px solid #e1e8ed; display: flex; flex-direction: column; transition: 0.3s; }
-        .video-card:hover { transform: translateY(-5px); }
-        
-        .iframe-container { position: relative; padding-bottom: 56.25%; height: 0; background: #000; }
-        .iframe-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        
-        .card-info { padding: 20px; text-align: left; flex-grow: 1; display: flex; flex-direction: column; }
-        .card-info h3 { margin: 0 0 8px 0; font-size: 1.1rem; color: #0056b3; }
-        .card-info p { margin: 0 0 15px 0; font-size: 0.95rem; color: #555; line-height: 1.4; }
-        
-        .btn-github { margin-top: auto; background: #24292e; color: white !important; text-decoration: none; padding: 10px 15px; border-radius: 6px; font-size: 0.85rem; font-weight: bold; display: inline-flex; align-items: center; justify-content: center; transition: 0.3s; }
-        .btn-github i { margin-right: 8px; font-size: 1.1rem; }
-        .btn-github:hover { background: #404448; }
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --border-color: #334155;
+            --accent-color: #38bdf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --btn-github: #24292e;
+            --btn-demo: #2563eb;
+        }
 
-        .ai-card { background: white; padding: 25px; border-radius: 12px; border-left: 8px solid #0056b3; margin-top: 30px; text-align: left; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .roadmap-list { list-style: none; padding: 0; margin-top: 15px; }
-        .roadmap-list li { margin-bottom: 8px; font-size: 0.9rem; display: flex; align-items: center; }
-        .roadmap-list li i { color: #2ecc71; margin-right: 10px; }
-        
-        .contact-section { margin-top: 40px; padding: 30px; background: #1a1a2e; border-radius: 15px; color: white; }
-        .contact-buttons { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; margin-top: 20px; }
-        .btn { padding: 12px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: flex; align-items: center; transition: 0.3s; color: white !important; }
-        .btn i { margin-right: 10px; font-size: 1.2rem; }
-        .btn-whatsapp { background: #25d366; }
-        .btn-linkedin { background: #0077b5; }
-        footer { margin-top: 50px; padding: 20px; color: #888; font-size: 0.85rem; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        header {
+            background: #111827;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            object-fit: cover;
+            margin-bottom: 12px;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+        }
+
+        h1 {
+            margin: 5px 0;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .subtitle {
+            color: var(--accent-color);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tag {
+            background: #1e293b;
+            border: 1px solid var(--border-color);
+            color: #cbd5e1;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tag i { color: var(--accent-color); }
+
+        .main-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            color: var(--text-main);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 500px) {
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-color);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .card-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #f1f5f9;
+        }
+
+        .project-date {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            background: #0f172a;
+            padding: 3px 8px;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+            white-space: nowrap;
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin: 0 0 15px 0;
+            line-height: 1.5;
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 18px;
+        }
+
+        .mini-badge {
+            font-size: 0.75rem;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .card-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .btn-action {
+            flex: 1;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-action:hover { opacity: 0.85; }
+
+        .btn-github {
+            background: var(--btn-github);
+            color: #ffffff;
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-demo {
+            background: var(--btn-demo);
+            color: #ffffff;
+        }
+
+        .ai-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-color);
+            margin-bottom: 40px;
+        }
+
+        .ai-card h3 { margin-top: 0; color: var(--text-main); font-size: 1.1rem; }
+
+        .roadmap-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0 0 0;
+        }
+
+        .roadmap-list li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .roadmap-list li i { color: #10b981; }
+
+        .contact-section {
+            padding: 30px;
+            background: #111827;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .btn-contact {
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+        }
+
+        .btn-whatsapp { background: #059669; }
+        .btn-linkedin { background: #0284c7; }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
@@ -62,85 +288,159 @@
     </header>
 
     <div class="main-container">
-        <div class="video-grid">
+        
+        <div class="section-title">
+            <i class="fas fa-code-branch" style="color: var(--accent-color);"></i> Proyectos Destacados
+        </div>
 
-            <div class="video-card">
-                <div class="card-info" style="padding-top: 30px;">
-                    <h3>Observabilidad y Automatización DevOps</h3>
-                    <p>Aprovisionamiento declarativo con Terraform, automatización de auditorías con Ansible y monitoreo en Docker usando Prometheus, Grafana y Node Exporter para la ingesta de métricas en tiempo real.</p>
-                    <a href="https://github.com/dbraca11/lab-devops-monitoreo" target="_blank" class="btn-github">
-                        <i class="fab fa-github"></i> Ver Código y Documentación
+        <div class="projects-grid">
+
+            <!-- Proyecto 1 -->
+            <div class="project-card">
+                <div>
+                    <div class="card-header">
+                        <h3>Observabilidad y Automatización DevOps</h3>
+                        <span class="project-date"><i class="far fa-calendar-alt"></i> Ago 2026</span>
+                    </div>
+                    <p class="card-description">Aprovisionamiento declarativo con Terraform, automatización de auditorías con Ansible y monitoreo en Docker usando Prometheus, Grafana y Node Exporter.</p>
+                    <div class="tech-badges">
+                        <span class="mini-badge">Terraform</span>
+                        <span class="mini-badge">Ansible</span>
+                        <span class="mini-badge">Prometheus</span>
+                        <span class="mini-badge">Grafana</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="https://github.com/dbraca11/lab-devops-monitoreo" target="_blank" class="btn-action btn-github">
+                        <i class="fab fa-github"></i> Repositorio
                     </a>
                 </div>
             </div>
 
-            <div class="video-card">
-                <div class="card-info" style="padding-top: 30px;">
-                    <h3>Bot Financiero & Pipeline CI/CD</h3>
-                    <p>Automatización de consultas de tasas (BCV y Binance P2P) en Telegram usando Python, Flask y Gunicorn. Orquestado con GitLab CI/CD Schedules (Cron) y desplegado de forma continua en Render (PaaS).</p>
-                    <a href="https://github.com/dbraca11/-monitoreo-tasas-bancarias" target="_blank" class="btn-github">
-                        <i class="fab fa-github"></i> Ver Código y Documentación
+            <!-- Proyecto 2 -->
+            <div class="project-card">
+                <div>
+                    <div class="card-header">
+                        <h3>Bot Financiero & Pipeline CI/CD</h3>
+                        <span class="project-date"><i class="far fa-calendar-alt"></i> Ago 2026</span>
+                    </div>
+                    <p class="card-description">Automatización de consultas de tasas (BCV y Binance P2P) en Telegram con Python, Flask y Gunicorn. Orquestado con GitLab CI/CD y Render.</p>
+                    <div class="tech-badges">
+                        <span class="mini-badge">Python</span>
+                        <span class="mini-badge">GitLab CI/CD</span>
+                        <span class="mini-badge">Telegram API</span>
+                        <span class="mini-badge">Render</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="https://github.com/dbraca11/-monitoreo-tasas-bancarias" target="_blank" class="btn-action btn-github">
+                        <i class="fab fa-github"></i> Repositorio
                     </a>
                 </div>
             </div>
 
-            <div class="video-card">
-                <div class="iframe-container">
-                    <iframe src="https://www.youtube.com/embed/5iNNl5d6Ph8" allowfullscreen></iframe>
+            <!-- Proyecto 3 -->
+            <div class="project-card">
+                <div>
+                    <div class="card-header">
+                        <h3>Orquestación Resiliente (Docker & Redis)</h3>
+                        <span class="project-date"><i class="far fa-calendar-alt"></i> Jul 2026</span>
+                    </div>
+                    <p class="card-description">Implementación de lógica de reintentos y tolerancia a fallos (Self-healing) para garantizar disponibilidad de microservicios críticos.</p>
+                    <div class="tech-badges">
+                        <span class="mini-badge">Docker</span>
+                        <span class="mini-badge">Redis</span>
+                        <span class="mini-badge">Resilience</span>
+                    </div>
                 </div>
-                <div class="card-info">
-                    <h3>Orquestación Resiliente (Docker & Redis)</h3>
-                    <p>Implementación de lógica de reintentos (Self-healing) para garantizar disponibilidad de microservicios.</p>
-                    <a href="https://github.com/dbraca11/docker-redis-resilience-monitor" target="_blank" class="btn-github">
-                        <i class="fab fa-github"></i> Ver Código y Documentación
+                <div class="card-actions">
+                    <a href="https://github.com/dbraca11/docker-redis-resilience-monitor" target="_blank" class="btn-action btn-github">
+                        <i class="fab fa-github"></i> Repositorio
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=5iNNl5d6Ph8" target="_blank" class="btn-action btn-demo">
+                        <i class="fab fa-youtube"></i> Demo
                     </a>
                 </div>
             </div>
 
-            <div class="video-card">
-                <div class="iframe-container">
-                    <iframe src="https://www.youtube.com/embed/reDVrXt5fKo" allowfullscreen></iframe>
+            <!-- Proyecto 4 -->
+            <div class="project-card">
+                <div>
+                    <div class="card-header">
+                        <h3>Dockerización y Monitoreo Proactivo</h3>
+                        <span class="project-date"><i class="far fa-calendar-alt"></i> Jun 2026</span>
+                    </div>
+                    <p class="card-description">Empaquetado de microservicios en Python y gestión de observabilidad en tiempo real con Docker Logs y alertas.</p>
+                    <div class="tech-badges">
+                        <span class="mini-badge">Docker</span>
+                        <span class="mini-badge">Python</span>
+                        <span class="mini-badge">Logs</span>
+                    </div>
                 </div>
-                <div class="card-info">
-                    <h3>Dockerización y Monitoreo Proactivo</h3>
-                    <p>Empaquetado de microservicios en Python y gestión de observabilidad en tiempo real con Docker Logs.</p>
-                    <a href="https://github.com/dbraca11/vigilante-infra" target="_blank" class="btn-github">
-                        <i class="fab fa-github"></i> Ver Código y Documentación
+                <div class="card-actions">
+                    <a href="https://github.com/dbraca11/vigilante-infra" target="_blank" class="btn-action btn-github">
+                        <i class="fab fa-github"></i> Repositorio
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=reDVrXt5fKo" target="_blank" class="btn-action btn-demo">
+                        <i class="fab fa-youtube"></i> Demo
                     </a>
                 </div>
             </div>
 
-            <div class="video-card">
-                <div class="iframe-container">
-                    <iframe src="https://www.youtube.com/embed/3ugEfcPBwsw" allowfullscreen></iframe>
+            <!-- Proyecto 5 -->
+            <div class="project-card">
+                <div>
+                    <div class="card-header">
+                        <h3>Infraestructura Resiliente (K8s)</h3>
+                        <span class="project-date"><i class="far fa-calendar-alt"></i> May 2026</span>
+                    </div>
+                    <p class="card-description">Despliegue de clúster Kubernetes con alta disponibilidad y autosanación automática ante fallos de nodos.</p>
+                    <div class="tech-badges">
+                        <span class="mini-badge">Kubernetes</span>
+                        <span class="mini-badge">HA</span>
+                        <span class="mini-badge">Self-healing</span>
+                    </div>
                 </div>
-                <div class="card-info">
-                    <h3>Infraestructura Resiliente (K8s)</h3>
-                    <p>Despliegue de clúster con alta disponibilidad y autosanación automática ante fallos de nodos.</p>
-                    <a href="https://github.com/dbraca11/Infraestructura-Resiliente-K8s-/tree/main" target="_blank" class="btn-github">
-                        <i class="fab fa-github"></i> Ver Código y Documentación
+                <div class="card-actions">
+                    <a href="https://github.com/dbraca11/Infraestructura-Resiliente-K8s-/tree/main" target="_blank" class="btn-action btn-github">
+                        <i class="fab fa-github"></i> Repositorio
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=3ugEfcPBwsw" target="_blank" class="btn-action btn-demo">
+                        <i class="fab fa-youtube"></i> Demo
                     </a>
                 </div>
             </div>
 
-            <div class="video-card">
-                <div class="iframe-container">
-                    <iframe src="https://drive.google.com/file/d/1z4OeIHPjFfJ2GHU6Ucox8tiQzcwDcfln/preview" allowfullscreen></iframe>
+            <!-- Proyecto 6 -->
+            <div class="project-card">
+                <div>
+                    <div class="card-header">
+                        <h3>IaC y Escalado Horizontal</h3>
+                        <span class="project-date"><i class="far fa-calendar-alt"></i> Abr 2026</span>
+                    </div>
+                    <p class="card-description">Automatización de infraestructura como código y crecimiento elástico de recursos según la demanda del tráfico en tiempo real.</p>
+                    <div class="tech-badges">
+                        <span class="mini-badge">K8s</span>
+                        <span class="mini-badge">IaC</span>
+                        <span class="mini-badge">Autoscaling</span>
+                    </div>
                 </div>
-                <div class="card-info">
-                    <h3>IaC y Escalado Horizontal</h3>
-                    <p>Automatización de infraestructura y crecimiento elástico de recursos según la demanda del tráfico.</p>
-                    <a href="https://github.com/dbraca11/k8s-iac-scaling" target="_blank" class="btn-github">
-                        <i class="fab fa-github"></i> Ver Código y Documentación
+                <div class="card-actions">
+                    <a href="https://github.com/dbraca11/k8s-iac-scaling" target="_blank" class="btn-action btn-github">
+                        <i class="fab fa-github"></i> Repositorio
+                    </a>
+                    <a href="https://drive.google.com/file/d/1z4OeIHPjFfJ2GHU6Ucox8tiQzcwDcfln/view" target="_blank" class="btn-action btn-demo">
+                        <i class="fas fa-play-circle"></i> Demo
                     </a>
                 </div>
             </div>
 
         </div>
 
+        <!-- Tópicos de Interés -->
         <div class="ai-card">
-            <h3 style="margin-top:0; color:#0056b3;"><i class="fas fa-list-ul"></i> Tópicos de Interés & Roadmap</h3>
-            <p>Especialización en desarrollo de proyectos bajo los siguientes pilares:</p>
+            <h3><i class="fas fa-list-ul" style="color: var(--accent-color);"></i> Tópicos de Interés & Roadmap</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Especialización en desarrollo de proyectos bajo los siguientes pilares:</p>
             <ul class="roadmap-list">
                 <li><i class="fas fa-check-circle"></i> Aprovisionamiento de Infraestructura como Código con Terraform & Ansible.</li>
                 <li><i class="fas fa-check-circle"></i> Observabilidad Avanzada y Monitoreo de Métricas con Prometheus & Grafana.</li>
@@ -149,21 +449,22 @@
             </ul>
         </div>
 
+        <!-- Contacto -->
         <div class="contact-section">
-            <h3>¿Charlamos?</h3>
+            <h3 style="margin:0 0 10px 0;">¿Hablamos sobre un proyecto o vacante?</h3>
+            <p style="color: var(--text-muted); margin:0; font-size: 0.9rem;">Disponible para proyectos de infraestructura, migración a contenedores u observabilidad.</p>
             <div class="contact-buttons">
-                <a href="https://wa.me/584242564311" class="btn btn-whatsapp" target="_blank">
+                <a href="https://wa.me/584242564311" class="btn-contact btn-whatsapp" target="_blank">
                     <i class="fab fa-whatsapp"></i> WhatsApp Directo
                 </a>
-                <a href="https://www.linkedin.com/in/darwin-braca-641499188/" class="btn btn-linkedin" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn Perfil
+                <a href="https://www.linkedin.com/in/darwin-braca-641499188/" class="btn-contact btn-linkedin" target="_blank">
+                    <i class="fab fa-linkedin"></i> Perfil LinkedIn
                 </a>
             </div>
         </div>
 
-        <footer>© 2026 Darwin Braca | Portafolio Profesional</footer>
+        <footer>© 2026 Darwin Braca | Platform Engineer Portfolio</footer>
     </div>
 
 </body>
 </html>
-
