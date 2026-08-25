@@ -67,7 +67,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 8px;
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
         }
 
@@ -279,8 +279,10 @@
         <h1>Darwin Braca</h1>
         <p class="subtitle">Platform Engineer | Infraestructura, Observabilidad & Automatización</p>
         <div class="tags">
-            <span class="tag"><i class="fab fa-docker"></i> Docker</span>
             <span class="tag"><i class="fas fa-cubes"></i> Kubernetes</span>
+            <span class="tag"><i class="fas fa-sync-alt"></i> Argo CD</span>
+            <span class="tag"><i class="fas fa-dharmachakra"></i> Helm</span>
+            <span class="tag"><i class="fab fa-docker"></i> Docker</span>
             <span class="tag"><i class="fas fa-layer-group"></i> Terraform</span>
             <span class="tag"><i class="fas fa-terminal"></i> Ansible</span>
             <span class="tag"><i class="fas fa-chart-line"></i> Prometheus & Grafana</span>
@@ -297,7 +299,30 @@
 
         <div class="projects-grid">
 
-            <!-- Proyecto 1 -->
+            <!-- Proyecto 1 (Nuevo): Acme Payments GitOps -->
+            <div class="project-card">
+                <div>
+                    <div class="card-header">
+                        <h3>GitOps & Observabilidad en K8s (Acme Payments)</h3>
+                        <span class="project-date"><i class="far fa-calendar-alt"></i> Ago 2026</span>
+                    </div>
+                    <p class="card-description">Entrega continua declarativa con Argo CD (self-healing y drift correction), microservicio FastAPI importado a containerd, stack de Grafana vía Helm y rollback automatizado ante fallos de despliegue.</p>
+                    <div class="tech-badges">
+                        <span class="mini-badge">Kubernetes</span>
+                        <span class="mini-badge">Argo CD</span>
+                        <span class="mini-badge">Helm</span>
+                        <span class="mini-badge">Grafana</span>
+                        <span class="mini-badge">FastAPI</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="https://github.com/dbraca11/acme-payments-proyecto-personal-agosto-2026" target="_blank" class="btn-action btn-github">
+                        <i class="fab fa-github"></i> Repositorio
+                    </a>
+                </div>
+            </div>
+
+            <!-- Proyecto 2 -->
             <div class="project-card">
                 <div>
                     <div class="card-header">
@@ -319,7 +344,7 @@
                 </div>
             </div>
 
-            <!-- Proyecto 2 -->
+            <!-- Proyecto 3 -->
             <div class="project-card">
                 <div>
                     <div class="card-header">
@@ -341,7 +366,7 @@
                 </div>
             </div>
 
-            <!-- Proyecto 3 -->
+            <!-- Proyecto 4 -->
             <div class="project-card">
                 <div>
                     <div class="card-header">
@@ -365,7 +390,7 @@
                 </div>
             </div>
 
-            <!-- Proyecto 4 -->
+            <!-- Proyecto 5 -->
             <div class="project-card">
                 <div>
                     <div class="card-header">
@@ -389,7 +414,7 @@
                 </div>
             </div>
 
-            <!-- Proyecto 5 -->
+            <!-- Proyecto 6 -->
             <div class="project-card">
                 <div>
                     <div class="card-header">
@@ -413,7 +438,7 @@
                 </div>
             </div>
 
-            <!-- Proyecto 6 -->
+            <!-- Proyecto 7 -->
             <div class="project-card">
                 <div>
                     <div class="card-header">
@@ -444,6 +469,7 @@
             <h3><i class="fas fa-list-ul" style="color: var(--accent-color);"></i> Tópicos de Interés & Roadmap</h3>
             <p style="color: var(--text-muted); font-size: 0.9rem;">Especialización en desarrollo de proyectos bajo los siguientes pilares:</p>
             <ul class="roadmap-list">
+                <li><i class="fas fa-check-circle"></i> Entrega Continua & GitOps declarativo con Argo CD y Helm en Kubernetes.</li>
                 <li><i class="fas fa-check-circle"></i> Aprovisionamiento de Infraestructura como Código con Terraform & Ansible.</li>
                 <li><i class="fas fa-check-circle"></i> Observabilidad Avanzada y Monitoreo de Métricas con Prometheus & Grafana.</li>
                 <li><i class="fas fa-check-circle"></i> Filosofía y Métricas SRE (SLO, SLI, Error Budgets & Blameless Postmortems).</li>
