@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio Técnico de Darwin Braca - Platform Engineer | Infraestructura, Observabilidad & Automatización">
     <title>Darwin Braca | Portafolio Técnico</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -15,6 +16,10 @@
             --text-muted: #94a3b8;
             --btn-github: #24292e;
             --btn-demo: #2563eb;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
         }
 
         body {
@@ -99,13 +104,9 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
             margin-bottom: 40px;
-        }
-
-        @media (max-width: 500px) {
-            .projects-grid { grid-template-columns: 1fr; }
         }
 
         .project-card {
@@ -129,6 +130,7 @@
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 10px;
+            gap: 10px;
         }
 
         .card-header h3 {
