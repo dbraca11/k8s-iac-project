@@ -125,6 +125,11 @@
             border-color: var(--accent-color);
         }
 
+        .project-card.featured {
+            border: 1px solid var(--accent-color);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.12);
+        }
+
         .card-header {
             display: flex;
             justify-content: space-between;
@@ -201,6 +206,11 @@
 
         .btn-demo {
             background: var(--btn-demo);
+            color: #ffffff;
+        }
+
+        .btn-demo-green {
+            background: #059669;
             color: #ffffff;
         }
 
@@ -299,7 +309,36 @@
 
         <div class="projects-grid">
 
-            <!-- Proyecto Nuevo: AppMovil -->
+            <!-- Proyecto NUEVO: Kubernetes Progressive Delivery Lab -->
+            <div class="project-card featured">
+                <div>
+                    <div class="card-header">
+                        <h3>Kubernetes Progressive Delivery Lab</h3>
+                        <span class="project-date"><i class="far fa-calendar-alt"></i> Oct 2026</span>
+                    </div>
+                    <p class="card-description">Laboratorio de estrategias de despliegue progresivo sobre Kubernetes con Argo Rollouts. Implementación real de <strong>Blue/Green Deployment</strong> (cambio atómico de tráfico con promoción manual y rollback instantáneo) y <strong>Canary Deployment</strong> (pesos graduales 10% → 25% → 50% → 100% con pausas controladas). Incluye <strong>análisis automatizado con AnalysisTemplate</strong>: si la condición de negocio falla, Argo Rollouts revierte el despliegue sin intervención humana. Ejecutado 100% en entornos gratuitos (Killercoda + Argo Rollouts + GitHub Pages). Demos interactivas en HTML/JS con walkthrough paso a paso de los comandos reales y troubleshooting documentado.</p>
+                    <div class="tech-badges">
+                        <span class="mini-badge">Kubernetes</span>
+                        <span class="mini-badge">Argo Rollouts</span>
+                        <span class="mini-badge">Blue/Green</span>
+                        <span class="mini-badge">Canary</span>
+                        <span class="mini-badge">AnalysisTemplate</span>
+                        <span class="mini-badge">kubectl</span>
+                        <span class="mini-badge">Killercoda</span>
+                        <span class="mini-badge">GitHub Pages</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="https://github.com/dbraca11/kubernetes-progressive-delivery-lab" target="_blank" class="btn-action btn-github">
+                        <i class="fab fa-github"></i> Repositorio
+                    </a>
+                    <a href="https://dbraca11.github.io/kubernetes-progressive-delivery-lab/proyecto.html" target="_blank" class="btn-action btn-demo-green">
+                        <i class="fas fa-play-circle"></i> Demo
+                    </a>
+                </div>
+            </div>
+
+            <!-- Proyecto: AppMovil -->
             <div class="project-card">
                 <div>
                     <div class="card-header">
@@ -540,6 +579,7 @@
             <p style="color: var(--text-muted); font-size: 0.9rem;">Especialización en desarrollo de proyectos bajo los siguientes pilares:</p>
             <ul class="roadmap-list">
                 <li><i class="fas fa-check-circle"></i> Entrega Continua & GitOps declarativo con Argo CD y Helm en Kubernetes.</li>
+                <li><i class="fas fa-check-circle"></i> Estrategias de despliegue progresivo (Blue/Green, Canary) con Argo Rollouts.</li>
                 <li><i class="fas fa-check-circle"></i> Aprovisionamiento de Infraestructura como Código con Terraform & Ansible.</li>
                 <li><i class="fas fa-check-circle"></i> Observabilidad Avanzada y Monitoreo de Métricas con Prometheus & Grafana.</li>
                 <li><i class="fas fa-check-circle"></i> Filosofía y Métricas SRE (SLO, SLI, Error Budgets & Blameless Postmortems).</li>
